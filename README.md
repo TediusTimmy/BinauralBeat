@@ -5,15 +5,15 @@ YouTube recommended me this video on Binaural Beats. It was dreadful: the absolu
 
 Controls
 --------
-W/S - Add or remove .1 Hz to the frequency playing in the left ear.
-A/D - Add or remove .1 Hz to the frequency playing in the right ear.
-Up/Down - Go up or down a note. Only the diatonic scale is present. Only octaves 0 to 5 are present (B5 is at the limit of what web results tell me can be heard).
-Z - Sine Wave
-X - Triangular Wave
-C - Square Wave
-V - Saw Wave
-B - Toggle 12-tone equal temperament and Pythagorean temperament
-N - Add white noise
+W/S - Add or remove .1 Hz to the frequency playing in the left ear.  
+A/D - Add or remove .1 Hz to the frequency playing in the right ear.  
+Up/Down - Go up or down a note. Only the diatonic scale is present. Only octaves 0 to 5 are present (B5 is at the limit of what web results tell me can be heard).  
+Z - Sine Wave  
+X - Triangular Wave  
+C - Square Wave  
+V - Saw Wave  
+B - Toggle 12-tone equal temperament and Pythagorean temperament  
+N - Add white noise  
 Q - Quit
 
 The maximum beat allowed is 14 Hz.
