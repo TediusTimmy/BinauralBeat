@@ -1,0 +1,5 @@
+This version of olcPixelGameEngine and olcPGEX_Sound remove all warnings with -Wall -Wextra -Wpedantic when compiled under the Cygwin MinGW w64 cross compiler.
+
+Also, olcPGEX_Sound has had the timing bug removed.
+
+--Thomas
