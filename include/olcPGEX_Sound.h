@@ -544,18 +544,18 @@ namespace olc
 			short nNewSample = 0;
 			int nCurrentBlock = m_nBlockCurrent * m_nBlockSamples;
 
-			for (unsigned int n = 0; n < m_nBlockSamples; n += m_nChannels)
+			for (unsigned int n = 0, t = 0; n < m_nBlockSamples; n += m_nChannels, ++t)
 			{
 				// User Process
 				for (unsigned int c = 0; c < m_nChannels; c++)
 				{
-					nNewSample = (short)(std::clamp(GetMixerOutput(c, m_fGlobalTime + fTimeStep * n, fTimeStep), -1.0, 1.0) * fMaxSample);
+					nNewSample = (short)(std::clamp(GetMixerOutput(c, m_fGlobalTime + fTimeStep * t, fTimeStep), -1.0, 1.0) * fMaxSample);
 					m_pBlockMemory[nCurrentBlock + n + c] = nNewSample;
 				}				
 			}
 
          nSampleCount += m_nBlockSamples;
-			m_fGlobalTime = fTimeStep * nSampleCount;
+			m_fGlobalTime = fTimeStep * (nSampleCount / m_nChannels);
 
 			// Send block to sound device
 			waveOutPrepareHeader(m_hwDevice, &m_pWaveHeaders[m_nBlockCurrent], sizeof(WAVEHDR));
